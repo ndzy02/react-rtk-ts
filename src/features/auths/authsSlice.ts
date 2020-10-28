@@ -8,7 +8,7 @@ interface CustomAuthsState {
 
 const initialState: CustomAuthsState[] = [];
 
-export const authersSlice = createSlice({
+export const authsSlice = createSlice({
   name: 'auths',
   initialState,
   reducers: {
@@ -18,7 +18,7 @@ export const authersSlice = createSlice({
   }
 });
 
-export const { setAuths, clearAuths } = authersSlice.actions;
+export const { setAuths, clearAuths } = authsSlice.actions;
 
 // 异步
 export const setAuthsAsync = (auths: CustomAuthsState[]): AppThunk => (
@@ -31,4 +31,4 @@ export const setAuthsAsync = (auths: CustomAuthsState[]): AppThunk => (
 
 export const auths = (state: RootState) => state.auths;
 
-export default authersSlice.reducer;
+export default authsSlice.reducer;

@@ -1,13 +1,17 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import auther from '@/features/auths/authsSlice';
-import breadcrumber from '@/features/breadcrumbs/breadcrumbsSlice';
-import collapseder from '@/features/collapsed/collapsedSlice';
+import auths from '@/features/auths/authsSlice';
+import breadcrumbs from '@/features/breadcrumbs/breadcrumbsSlice';
+import collapsed from '@/features/collapsed/collapsedSlice';
+import openKeys from '@/features/openKeys/openKeysSlice';
+import selectedKeys from '@/features/selectedKeys/selectedKeysSlice';
 // 全局数据
 const rootReducer = combineReducers({
-  auths: auther,
-  breadcrumbs: breadcrumber,
-  collapsed: collapseder
+  auths,
+  breadcrumbs,
+  collapsed,
+  openKeys,
+  selectedKeys
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
